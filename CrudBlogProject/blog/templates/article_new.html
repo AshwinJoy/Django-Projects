@@ -1,0 +1,16 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+<h1>Enter your new post here</h1>
+<form action="" method="POST" >
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<input type="submit" value="save">
+
+
+</form>
+
+{% endblock %}

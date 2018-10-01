@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+<h2>Delete this article</h2>
+
+<form action="" method="POST">
+{% csrf_token %}
+
+<h3>WARNING!!</h3>
+<p>Are you sure to delete {{article.title}} </p>
+
+<input type="submit" value="Delete">
+
+</form>
+
+{% endblock %}
