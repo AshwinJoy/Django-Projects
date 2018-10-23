@@ -1,0 +1,36 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+  <title>My Blog | Login</title>
+</head>
+<body>
+
+<header>
+  <h1> <a href="">My personal blog</a> </h1>
+</header>
+<div class="container">
+{% block content %}
+<h3>This is a signup page</h1>
+<form method="POST">
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<button type="submit" name="button">Sign Up</button>
+</form>
+
+
+
+{% endblock content %}
+</div>
+
+</body>
+</html>
